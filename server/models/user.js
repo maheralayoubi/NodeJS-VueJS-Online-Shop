@@ -9,4 +9,4 @@ const UserSchema = new Schema({
 });
 
 // Exporting our userSchema so we can use it in another file
-module.exports = mpngoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
