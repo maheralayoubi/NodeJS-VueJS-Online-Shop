@@ -8,7 +8,9 @@ const mongoose = require('mongoose');
 
 const app = express()
 
-mongoose.connect('mongodb+srv://root:87SKS3hqwbrzyraU@amazone-clone.0zoki.mongodb.net/<dbname>?retryWrites=true&w=majority', (err) => {
+mongoose.connect('mongodb+srv://root:87SKS3hqwbrzyraU@amazone-clone.0zoki.mongodb.net/<dbname>?retryWrites=true&w=majority',
+    { useNewUrlParser: true, useUnifiedTopology: true  },
+    (err) => {
     if (err) {
         console.log(err);
     } else {
