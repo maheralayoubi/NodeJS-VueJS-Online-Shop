@@ -4,8 +4,17 @@ const express = require('express');
 const morgan = require('morgan');
 // BodyParser is a library that gets data from the front-end to the back-end and parse it into proper format like json or url encode.
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express()
+
+mongoose.connect('mongodb+srv://root:87SKS3hqwbrzyraU@amazone-clone.0zoki.mongodb.net/<dbname>?retryWrites=true&w=majority', (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log('Connected to the database');
+    }
+});
 
 // Middle wares that are important to enable the back-end to parse data from the front-end
 app.use(morgan('dev'));
