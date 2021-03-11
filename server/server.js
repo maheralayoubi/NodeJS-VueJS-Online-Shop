@@ -5,10 +5,14 @@ const morgan = require('morgan');
 // BodyParser is a library that gets data from the front-end to the back-end and parse it into proper format like json or url encode.
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+// Load up the file
+dotenv.config();
 
 const app = express()
 
-mongoose.connect('mongodb+srv://root:87SKS3hqwbrzyraU@amazone-clone.0zoki.mongodb.net/<dbname>?retryWrites=true&w=majority',
+mongoose.connect(process.env.DATABASE,
     { useNewUrlParser: true, useUnifiedTopology: true  },
     (err) => {
     if (err) {
