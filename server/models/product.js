@@ -12,3 +12,6 @@ const ProductSchema = new Schema({
     rating: [Number]
 });
 
+// Exporting our userSchema so we can use it in another file
+module.exports = mongoose.model('Product', ProductSchema);
+
