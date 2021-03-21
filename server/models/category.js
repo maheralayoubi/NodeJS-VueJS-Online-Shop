@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CategorySchema = new Schema({
-    title: String,
+    type: { type: String, unique: true, required: true }
 });
 
 // Exporting our userSchema so we can use it in another file
