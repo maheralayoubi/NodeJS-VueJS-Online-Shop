@@ -29,6 +29,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+//Require apis
+const productRoutes = require('./routes/product');
+app.use("/api", productRoutes);
 
 /*
 // GET - Retrieve data from the server
