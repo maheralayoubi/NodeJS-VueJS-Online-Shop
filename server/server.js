@@ -29,11 +29,12 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+
+/*
 // GET - Retrieve data from the server
 app.get('/', (req, res) => {
     res.json('Hello There!');
 });
-
 // POST - Send data from front-end to back-end
 app.post('/', (req, res) => {
     let user = new User();
@@ -49,7 +50,7 @@ app.post('/', (req, res) => {
             res.jsonp('Successfully Saved');
         }
     })
-});
+});*/
 
 app.listen(3000, (err) => {
     if (err) {

@@ -42,3 +42,5 @@ router.post('/products', async (req, res) => {
 
 
 // DELETE request for deleting a single product
+
+module.exports = router;
